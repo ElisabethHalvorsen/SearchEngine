@@ -6,7 +6,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 // idea? multiprocessing
-// idea? regex
+// idea? regex -> could be slow if pattern is too complex, but not here I think
+// idea? cmd F algorithm -> Booyer Moore Algorithm, we want to skip if there are spaces...
+// Vectorise the words? 
+// sliding window approach
 
 
 // A SearchEngine starts empty, but will eventually store information about many documents.

@@ -27,6 +27,24 @@ public class Document {
         return wordPositions;
     }
 
+    public List<Integer> manualSearchWordPosition(String word) {
+        String[] textSplit = text.split("\\s+");
+        char firstChar = word.charAt(0);
+        int totalLength = 0;
+        List<Integer> wordPositions = new ArrayList<Integer>();
+        for(String wordInText : textSplit){
+            // Check if the first characters are the same as the word
+            if(wordInText.charAt(0) == firstChar){
+                // Check if the word is the same as the word
+                if(wordInText.equals(word)){
+                    wordPositions.add(totalLength);
+                }
+            }
+            totalLength += wordInText.length() + 1;
+        }
+        return wordPositions;
+    }
+
     public String getText() {
         return text;
     }
